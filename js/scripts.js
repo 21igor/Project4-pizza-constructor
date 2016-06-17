@@ -14,9 +14,28 @@
 //
 // }
 
+
+
+
 // user interface logic
 $(document).ready(function(){
-  $("form#ingredients").submit(function(event) {
+
+  $('form').click(function(){
+
+     var id = this.id;
+     if(id == 'italiano')
+       // page background
+         alert('Italiano');
+     else
+         alert('something else');
+       //header
+  })
+
+
+
+
+
+  $("form#ingredients").submit(function() {
     event.preventDefault();
     var selected = [];
     $('input:checked').each(function() {
@@ -24,7 +43,7 @@ $(document).ready(function(){
     });
     var price = 0;
     for (var i in selected) {
-      price += parseInt(selected[i]);
+      price += parseFloat(selected[i]);
     }
     $("#price").html(price);
   });

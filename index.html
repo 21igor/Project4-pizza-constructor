@@ -13,35 +13,36 @@
       <div class="container-1">
         <h1>Welcome to the pizza constructor site!</h1>
         <br>
-        <h3>Please make your choice.</h3>
       </div>
       <div class="row">
         <div class="col-md-8">
           <img src="img/circle.png" alt="empty circle" />
         </div>
         <div class="col-md-4">
+          <h3>Please make your choice.</h3>
+          <br>
           <form id="ingredients">
             <div class="">
               <label for="radioButton">Base:</label>
-              <div class="radio">
+              <div class="radio" id="italiano" >
                 <label>
-                  <input type="radio" name="base" value="1" checked>
+                  <input type="radio" name="base" value="5.99">
                   Italiano (thin)
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="base" value="2">
+                  <input type="radio" name="base" value="6.99">
                   Americano (thick)
                 </label>
               </div>
             </div>
-
+            <br>
             <div class="">
               <label for="radioButton">Sause:</label>
               <div class="radio">
                 <label>
-                  <input type="radio" name="sause" value="1" checked>
+                  <input type="radio" name="sause" value="1">
                   Tomato (red)
                 </label>
               </div>
@@ -52,19 +53,17 @@
                 </label>
               </div>
             </div>
-
+            <br>
             <div class="">
               <label for="checkBox">Toppings:</label><br>
-              <input type="checkbox" name="option1" value="1">chicken<br>
-              <input type="checkbox" name="option2" value="2">olives<br>
-              <input type="checkbox" name="option3" value="3">mozzarella<br>
-              <input type="checkbox" name="option4" value="4">champignons<br>
+              <input type="checkbox" name="option1" value="1"> chicken<br>
+              <input type="checkbox" name="option2" value="2"> olives<br>
+              <input type="checkbox" name="option3" value="3"> mozzarella<br>
+              <input type="checkbox" name="option4" value="4"> champignons<br>
             </div>
             <br>
-            <button id="button" type="submit" class="btn">Check price</button>
-            <button id="button" type="submit" class="btn">   Buy   </button>
-          </form>
-          <div class="price">
+            <button id="check" type="submit" class="btn">Check price</button>
+            <span class="btn btn-success" id="buy">BUY</span>          <div class="price">
             <h3>Price USD: <span id="price"></span></h3>
           </div>
 
