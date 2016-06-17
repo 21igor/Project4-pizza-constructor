@@ -1,8 +1,24 @@
+function Pizza() {
+  this.base = base;
+  this.sause = sause;
+  this.toppings = [];
+}
+function Toppings () {
+  this.chicken = chicken;
+  this.olives = olives;
+  this.mozzarella = mozzarella;
+  this.champignons = champignons;
+}
 
+Pizza.prototype.myOrder = function() {
 
+}
 
-$(document).ready(function() {
-  $("form#dest").submit(function() {
-    event.preventDefault();
+// user interface logic
+$("form#ingredients").submit(function(event) {
+  event.preventDefault();
+  var selected = [];
+  $('input:checked').each(function() {
+      selected.push($(this).attr('value'));
   });
 });
